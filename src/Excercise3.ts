@@ -20,14 +20,6 @@ function BigZ(data: number[][]): number[] {
                 arr.push(data[index + 1][j - 1]);
                 data[++index][--j] = null;
             } else {
-                /*  if (data[index + 1] && data[index][j + 1]) {
-                     arr.push(data[index][++j]);
-                     data[index][j] = null;
-                     if (data[index - 1] && data[index - 1][j + 1]) {
-                         arr.push(data[--index][++j]);
-                         data[index][j] = null;
-                     }
-                 } else */
                 if (data[index - 1] && data[index - 1][j + 1]) {
                     arr.push(data[--index][++j]);
                     data[index][j] = null;
