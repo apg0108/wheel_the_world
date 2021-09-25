@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "tsc" : "tsc"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Asiel",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.4.3"
+  }
 }

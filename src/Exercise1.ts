@@ -1,24 +1,16 @@
-function PossibleSpeed(redShirtSpeeds: number[], blueShirtSpeeds: number[], fastest = true): number {
+function PossibleSpeed(redShirtSpeeds: number[], blueShirtSpeeds: number[], fastest: boolean): number {
 
     if (fastest) {
         let maxSpeed = 0;
-        for (let i = 0; i < redShirtSpeeds.length; i++) {
-            if (redShirtSpeeds[i] > blueShirtSpeeds[i])
-                maxSpeed += redShirtSpeeds[i];
-            else
-                maxSpeed += blueShirtSpeeds[i];
-        }
+        for (let i = 0; i < redShirtSpeeds.length; i++)
+            redShirtSpeeds[i] > blueShirtSpeeds[i] ? maxSpeed += redShirtSpeeds[i] : maxSpeed += blueShirtSpeeds[i];
         return maxSpeed;
     } else {
         let minSpeed = 0;
-        for (let i = 0; i < redShirtSpeeds.length; i++) {
-            if (redShirtSpeeds[i] > blueShirtSpeeds[i])
-                minSpeed += blueShirtSpeeds[i];
-            else
-                minSpeed += redShirtSpeeds[i];
-        }
+        for (let i = 0; i < redShirtSpeeds.length; i++)
+            redShirtSpeeds[i] > blueShirtSpeeds[i] ? minSpeed += blueShirtSpeeds[i] : minSpeed += redShirtSpeeds[i];
         return minSpeed;
     }
 }
 
-console.log(PossibleSpeed([5, 5, 3, 10, 2], [3, 6, 7, 2, 1], false));
+//console.log(PossibleSpeed([5, 5, 3], [3, 6, 7], false));

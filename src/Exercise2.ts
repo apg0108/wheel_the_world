@@ -12,4 +12,4 @@ function HowManyCoins(denoms: number[], n: number): number {
 
 };
 
-console.log(HowManyCoins([3, 2, 3], 4));
+//console.log(HowManyCoins([3, 2, 3], 4));
